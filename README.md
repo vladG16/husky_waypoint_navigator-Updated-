@@ -114,35 +114,14 @@ You should see something like `ros2 humble`. If so, ROS 2 is installed correctly
 The ZED X camera requires Stereolabs' SDK to provide the robot with positional awareness and odometry data.
 
 ### Step 3.1 — Install NVIDIA Drivers
+The ZED X requires NVIDIA driver version 525 or newer. Follow NVIDIA's official
+installation guide for Ubuntu:
+👉 https://docs.nvidia.com/datacenter/tesla/driver-installation-guide/
 
-```bash
-sudo apt install ubuntu-drivers-common -y
-sudo ubuntu-drivers autoinstall
-sudo reboot
-```
-
-After rebooting, confirm your GPU is detected:
-
-```bash
-nvidia-smi
-```
-
-You should see your GPU and driver version listed.
-
-### Step 3.2 — Download and Install the ZED SDK
-
-Go to the Stereolabs download page and download the SDK for **Ubuntu 22.04**:
-
+### Step 3.2 — Install the ZED SDK
+Download and install the ZED SDK for Ubuntu 22.04 from the Stereolabs developer page.
+Make sure to select the version that matches your CUDA version:
 👉 https://www.stereolabs.com/developers/release
-
-Then run the installer (replace the filename with the version you downloaded):
-
-```bash
-chmod +x ZED_SDK_Ubuntu22_cuda*.run
-./ZED_SDK_Ubuntu22_cuda*.run
-```
-
-Follow the on-screen prompts and accept the defaults.
 
 ### Step 3.3 — Install the ZED ROS 2 Wrapper
 
